@@ -1,0 +1,21 @@
+:host{
+    display: block;
+    margin-top: 1rem;
+}
+
+.info-text{
+    text-align: center;
+}
+
+mat-spinner{
+    margin: auto;
+}
+.post-image img
+{
+    width: 250px;
+    height: 250px;
+}
+
+mat-paginator {
+    margin:1rem;
+}
