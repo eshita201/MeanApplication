@@ -1,5 +1,5 @@
 const http = require('http');
-const app = require('./backend/app');
+const app = require('./app');
 
 const dotenv=require('dotenv');
 const { prototype } = require('events');
