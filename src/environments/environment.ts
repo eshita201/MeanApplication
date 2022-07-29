@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: "http://postmeanapp.herokuapp.com/api"
+  apiUrl: "https://postmeanapp.herokuapp.com/api"
 };
 
 /*

@@ -1,5 +1,5 @@
 export const environment = {
   
-  apiUrl: "http://postmeanapp.herokuapp.com/api",
+  apiUrl: "https://postmeanapp.herokuapp.com/api",
   production: true
 };
