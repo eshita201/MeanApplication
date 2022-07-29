@@ -7,7 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "start:server": "nodemon ./backend/server.js",
-    "postinstall": "ng build --aot --target=production"
+    "postinstall": "ng build"
    
   },
   "private": true,
