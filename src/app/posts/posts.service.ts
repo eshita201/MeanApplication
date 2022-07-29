@@ -6,7 +6,7 @@ import { response } from 'express';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { environment  } from 'src/environments/environment';
-const BACKEND_URL = environment.apiUrl + "/posts/";
+const BACKEND_URL = "https://postappmean.herokuapp.com/" + "/posts/";
 @Injectable({providedIn: 'root'})
 export class PostsService {
     private posts: Post[] = [];
