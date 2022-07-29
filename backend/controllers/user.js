@@ -25,8 +25,6 @@ exports.createUser = (req,res,next)=>{
     });
 }
 
-
-
 exports.loginUser = async(req,res,next)=>{
     console.log('reached here 30 ' , req.body);
     let fetchedUser;
