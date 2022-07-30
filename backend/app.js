@@ -22,9 +22,10 @@ connectDb();
 app.use(bodyParser.json());
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use("/images", express.static(path.join("images")));
-app.use( express.static(__dirname + '/dist'));
+app.use( express.static(__dirname + '/dist/mean-app'));
 app.get("/",function(req,res){
- res.sendFile(path.join(__dirname + '/dist/index.html'))
+  console.log("reached here")
+ res.sendFile(path.join(__dirname + '/dist/mean-app/index.html'))
 })
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
