@@ -3,7 +3,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "backend/dist/out-tscut-tscut-tscut-tscut-tscut-tsc",
+    "outDir": "backend/dist/out-tscut-tscut-tscut-tscut-tscut-tscut-tscut-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": false,
     "noImplicitOverride": true,

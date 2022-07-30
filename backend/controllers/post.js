@@ -8,9 +8,9 @@ exports.addPosts =
     const post = new Post({
       title: req.body.title,
       content: req.body.content,
-    imagePath: url + "/images/" + req.file.filename,
-    //  imagePath:  "/images/" + req.file.filename,
-  
+    //imagePath: url + "/images/" + req.file.filename,
+    //   imagePath:  "/images/" + req.file.filename,
+    imagePath :  req.file.path,
       creator: req.userData.userid
     });
     console.log("Reached here:= 13" ,url );
@@ -83,10 +83,11 @@ exports.updatePost =
   if (req.file) {
    // const url ="https://postmeanapp.herokuapp.com"
     const url = req.protocol + "://" + req.get("host");
-   imagePath = url + "/images/" + req.file.filename
- //   imagePath =  "/images/" + req.file.filename
+   //imagePath = url + "/images/" + req.file.filename
+   // imagePath =  "/images/" + req.file.filename
+   imagePath =  req.file.path
   }
-  console.log("Reached here:= 13" ,url );
+  //console.log("Reached here:= 13" ,url );
   const post = new Post({
      _id: req.body.id,
      title: req.body.title,
