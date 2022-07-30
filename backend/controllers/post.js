@@ -2,14 +2,18 @@ const Post = require("../model/post");
 
 exports.addPosts = 
   (req,res,next)=>{
-     
-    const url = req.protocol + '://' + req.get("host");
+     console.log("Reached here:= 5" );
+    const url = "https://postmeanapp.herokuapp.com"
+     ///const url = req.protocol + '://' + req.get("host");
     const post = new Post({
       title: req.body.title,
       content: req.body.content,
-      imagePath: url + "/images/" + req.file.filename,
+    imagePath: url + "/images/" + req.file.filename,
+    //  imagePath:  "/images/" + req.file.filename,
+  
       creator: req.userData.userid
     });
+    console.log("Reached here:= 13" ,url );
    post.save().then(createdPost=>{
          res.status(201).json({
             message: "Post Added successfully",
@@ -77,9 +81,12 @@ exports.updatePost =
 (req,res,next)=>{
   let imagePath = req.body.imagePath;
   if (req.file) {
-    const url = req.protocol + "://" + req.get("host");
-    imagePath = url + "/images/" + req.file.filename
+    const url ="https://postmeanapp.herokuapp.com"
+   // const url = req.protocol + "://" + req.get("host");
+   imagePath = url + "/images/" + req.file.filename
+ //   imagePath =  "/images/" + req.file.filename
   }
+  console.log("Reached here:= 13" ,url );
   const post = new Post({
      _id: req.body.id,
      title: req.body.title,
@@ -95,6 +102,7 @@ exports.updatePost =
       res.status(200).json({
         message: "Posts updated succesfully! "
      });
+     
   //  }
    /*if(postData.modifiedCount   = 0 &&
        postData.matchedCount == 0){
