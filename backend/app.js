@@ -21,7 +21,7 @@ const connectDb = async=> {
 connectDb();
 app.use(bodyParser.json());
 app.use(bodyparser.urlencoded({ extended: false }));
-app.use("/images", express.static(__dirname + "/images"));
+app.use("/images", express.static(__dirname + "/backend/images"));
 app.use( express.static(__dirname + '/dist/mean-app'));
 app.get("/",function(req,res){
   console.log("reached here")
