@@ -3,8 +3,8 @@ const Post = require("../model/post");
 exports.addPosts = 
   (req,res,next)=>{
      console.log("Reached here:= 5" );
-    const url = "https://postmeanapp.herokuapp.com"
-     ///const url = req.protocol + '://' + req.get("host");
+   // const url = "https://postmeanapp.herokuapp.com"
+     const url = req.protocol + '://' + req.get("host");
     const post = new Post({
       title: req.body.title,
       content: req.body.content,
@@ -81,8 +81,8 @@ exports.updatePost =
 (req,res,next)=>{
   let imagePath = req.body.imagePath;
   if (req.file) {
-    const url ="https://postmeanapp.herokuapp.com"
-   // const url = req.protocol + "://" + req.get("host");
+   // const url ="https://postmeanapp.herokuapp.com"
+    const url = req.protocol + "://" + req.get("host");
    imagePath = url + "/images/" + req.file.filename
  //   imagePath =  "/images/" + req.file.filename
   }
